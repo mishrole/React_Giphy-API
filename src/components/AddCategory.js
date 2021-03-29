@@ -1,8 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 
-export const AddCategory = () => {
+export const AddCategory = ({ setCategories}) => {
 
-    const [inputValue, setInputValue] = useState('Hola mundo');
+    // useState() estado Undefined
+    // Si queremos que el input esté vacío, podemos dejar useState('')
+    const [inputValue, setInputValue] = useState('');
 
     const handleInputChange = (event) => {
         setInputValue(event.target.value);
@@ -10,7 +13,12 @@ export const AddCategory = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log('Submit hecho');
+
+        if (inputValue.trim().length > 0) {
+            setCategories( categories => [...categories, inputValue]);
+            setInputValue('');
+        }
+
     }
 
     return (
@@ -20,4 +28,8 @@ export const AddCategory = () => {
             </form>
         </>
     )
+}
+
+AddCategory.propTypes = {
+    setCategories: PropTypes.func.isRequired
 }
