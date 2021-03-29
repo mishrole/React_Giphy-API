@@ -12,7 +12,44 @@ code {
     monospace;
 }
 
+div#root {
+  width: 90%;
+  padding: 1rem;
+  margin: 0 auto;
+}
+
 input {
   font-size: 1.2rem;
   width: 100%;
 }
+
+.card {
+  align-content: center;
+  border: 1px solid grey;
+  border-radius: 0.5rem;
+  margin: 0.5rem;
+  overflow: hidden;
+}
+
+.card-grid {
+  align-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card__image > img {
+  height: 200px;
+  object-fit: fill;
+  /*   height: 200px;
+  width: fit-content;
+  object-fit: cover; */
+}
+
+.card__title {
+  text-align: center;
+  word-wrap: break-word;
+  padding: 0.5rem;
+}
+
