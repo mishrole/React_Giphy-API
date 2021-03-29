@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 
 export const AddCategory = ({ setCategories}) => {
 
-    // useState() estado Undefined
-    // Si queremos que el input esté vacío, podemos dejar useState('')
     const [inputValue, setInputValue] = useState('');
 
     const handleInputChange = (event) => {
