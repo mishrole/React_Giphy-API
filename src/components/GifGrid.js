@@ -12,9 +12,9 @@ export const GifGrid = ({ category }) => {
 
     return (
         <>
-            <h3>{category}</h3>
+            <h3 className="animate__animated animate__fadeIn animate__delay-1s">{category}</h3>
             {
-                loading && <p>loading</p>
+                loading && <p className="animate__animated animate__flash animate__delay-1s">loading</p>
             }
             {/* { loading ? 'Cargando...' : 'Data cargada'} */}
 
